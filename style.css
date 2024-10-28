@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+	--Blue: hsl(223, 87%, 63%);
+	--PaleBlue: hsl(223, 100%, 88%);
+	--LightRed: hsl(354, 100%, 66%);
+	--Gray: hsl(0, 0%, 59%);
+	--VeryDarkBlue: hsl(209, 33%, 12%);
+	--white: hsl(0, 0%, 100%);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: "Libre Franklin", sans-serif;
+	font-size: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+.contenedor-principal {
+	width: 375px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--white);
+}
+.logo {
+	margin: 60px 0 30px 0;
+}
+.txt {
+	text-align: center;
+	& h1 {
+		color: var(--Gray);
+		font-weight: 300;
+		span {
+			color: var(--VeryDarkBlue);
+			font-weight: 700;
+		}
+	}
+	& p {
+		font-size: 0.7em;
+		margin: 1rem 0;
+	}
+}
+.input {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+
+	& #email {
+		width: 280px;
+		height: 39px;
+		border-radius: 25px;
+		border: 1px solid var(--PaleBlue);
+		padding-left: 24px;
+		&:focus {
+			border: 1px solid var(--PaleBlue);
+		}
+	}
+
+	& #submid {
+		height: 39px;
+		border-radius: 25px;
+		background-color: var(--Blue);
+		border: none;
+		margin-bottom: 3rem;
+		color: var(--white);
+		font-weight: 600;
+		cursor: pointer;
+	}
+}
+
+.input-err {
+	display: flex;
+	flex-direction: column;
+	& #err {
+		color: var(--LightRed);
+		font-size: 0.7rem;
+		margin-bottom: 1rem;
+		visibility: hidden;
+	}
+}
+.copy {
+	text-align: center;
+	font-size: 0.8rem;
+	color: var(--Gray);
+	margin-top: 1rem;
+}
+
+.illustration {
+	width: 350px;
+	& img {
+		width: 100%;
+		object-fit: cover;
+	}
+}
+@media (width > 678px) {
+	.contenedor-principal {
+		width: 70%;
+		max-width: 500px;
+	}
+  
+	section {
+		width: 100%;
+	}
+
+	.input {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		gap: 10px;
+		.input-err {
+			width: 100%;
+			& #email {
+				width: 100%;
+			}
+		}
+		& #submid {
+			width: 30%;
+		}
+	}
+}
