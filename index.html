@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<title>Frontend Mentor | Ping coming soon page</title>
+
+		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+		<style>
+			.attribution {
+				font-size: 11px;
+				text-align: center;
+			}
+			.attribution a {
+				color: hsl(228, 45%, 44%);
+			}
+		</style>
+	</head>
+	<body>
+		<main class="contenedor-principal">
+			<picture class="logo">
+				<img src="./images/logo.svg" alt="logo de Ping" />
+			</picture>
+			<section class="txt">
+				<h1>We are launching <span>soon!</span></h1>
+				<p>Subscribe and get notified</p>
+			</section>
+			<section>
+				<form class="input" action="" method="post">
+					<div class="input-err">
+						<input
+							type="email"
+							name="email"
+							id="email"
+							placeholder="example@☺gmail.com"
+						/>
+						<span id="err">Please provide a valid email address.</span>
+					</div>
+					<input id="submid" type="submit" value="Notify Me">
+					
+				</form>
+			</section>
+			<picture class="illustration">
+				<img
+					src="/images/illustration-dashboard.png"
+					alt="illustration page in construction"
+				/>
+			</picture>
+		</main>
+
+		<footer>
+			<section class="copy">
+				<p>&copy; Copyright Ping. All rights reserved.</p>
+			</section>
+			<p class="attribution">
+				Challenge by
+				<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+					>Frontend Mentor</a
+				>. Coded by <a href="#">Your Name Here</a>.
+			</p>
+		</footer>
+		<script src="/main.js"></script>
+	</body>
+</html>
